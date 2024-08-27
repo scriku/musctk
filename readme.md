@@ -1,5 +1,6 @@
 This is a modified version of Superconducting Toolkit (SCTK).
 Calculation mode "lambda_mu_k" now only calculate mu, and the phonon part are skipped.
+
 Original repository: https://github.com/mitsuaki1987/sctk/tree/develop
 
 
@@ -12,7 +13,10 @@ $ git clone https://github.com/scriku/musctk.git
 $ patch -p1 < musctk/patch.diff
 $ ./configure --enable-openmp
 $ make pw ph pp
-$ cd sctk
+$ cd musctk
 $ make
 ```
 
+Other parts are identical to the original program.
+
+Manual: https://mitsuaki1987.github.io/sctk/en/_build/html/program.html
