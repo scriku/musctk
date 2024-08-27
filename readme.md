@@ -1,33 +1,18 @@
-# Installation
+This is a modified version of Superconducting Toolkit (SCTK).
+Calculation mode "lambda_mu_k" now only calculate mu, and the phonon part are skipped.
+Original repository: https://github.com/mitsuaki1987/sctk/tree/develop
 
-To use main branch
 
+Installation
 ``` bash
 $ git clone https://gitlab.com/QEF/q-e.git
 $ cd q-e
 $ git checkout 96cdd5ac6af9c060be392a95f14dbcbca5c1a890
-$ git clone https://github.com/mitsuaki1987/sctk.git -b main
-$ patch -p1 < sctk/patch.diff
-```
-
-To try the develop branch 
-
-``` bash
-$ git clone https://gitlab.com/QEF/q-e.git
-$ cd q-e
-$ git checkout 0e7fd34c024bde2ef2545e3aeda2bbfec770d500
-$ git clone https://github.com/mitsuaki1987/sctk.git -b develop
-$ patch -p1 < sctk/patch.diff
-```
-
-Configure the environment with the script `configure`
-as the same as the original Quantum ESPRESSO.
-               
-``` bash
+$ git clone https://github.com/scriku/musctk.git
+$ patch -p1 < musctk/patch.diff
 $ ./configure --enable-openmp
 $ make pw ph pp
 $ cd sctk
 $ make
 ```
 
-The executable file is `sctk.x`.
