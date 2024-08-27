@@ -1,0 +1,29 @@
+&CONTROL
+ calculation = 'scf'
+  pseudo_dir = '../../../pseudo/'
+/
+&SYSTEM
+       ibrav = 0
+         nat = 3
+        ntyp = 2
+     ecutwfc = 35.0
+     ecutrho = 280.0
+ occupations = 'tetrahedra_opt'
+/
+&ELECTRONS
+ mixing_beta = 0.3
+ conv_thr = 3.000000e-10
+/
+CELL_PARAMETERS angstrom
+   3.071452879   0.000000000   0.000000000
+  -1.5357264395    2.6599562197   0.000000000
+   0.000000000   0.000000000   3.519414016
+ATOMIC_SPECIES
+ B 10.811000 B.pbe-n-kjpaw_psl.0.1.upf
+ Mg 24.305000 Mg.pbe-n-kjpaw_psl.0.3.0.upf
+ATOMIC_POSITIONS crystal
+ Mg 0.000000 0.000000 0.000000
+ B 0.333333333333 0.666666666667 0.500000
+ B 0.666666666667 0.333333333333 0.500000
+K_POINTS automatic
+ 8 8 6 0 0 0
